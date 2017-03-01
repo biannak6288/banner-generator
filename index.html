@@ -10,18 +10,18 @@
       $('button').click(function() {
         $("#banner").fadeIn("slow"); //this is for the banner to appear when the user clicks the button, it is put on the top so it is the first thing that loads
         // this takes what the user typed in the text input and puts it in the h1 inside of the div     
-        $("#title").html(userName);
+        $("#name").html(userName);
         var userName = $("#subject").val();
-        $("#title").html(userName); // gets id of the h1 tag in the div and puts in the users input
-        var bgradio = $("input[title='bg']:checked").val(); //gets the user's choice from radio by checking which of the radio options is checked, it is able to know that the choices are different through the value.
+        $("#name").html(userName); // gets id of the h1 tag in the div and puts in the users input
+        var bgradio = $("input[name='bg']:checked").val(); //gets the user's choice from radio by checking which of the radio options is checked, it is able to know that the choices are different through the value.
         $('#banner').css('background-image', 'url(' + bgradio + ')'); //this selects the divs background and inserts the image that the user chose, "background-image" changes the image, url is used since i was using images and it was concatenated in order to use the picture the user chose  
-        var txtC = $("input[title='color']:checked").val(); //gets users choice of color from the radio options.
-        $("#title").css("color", txtC); //takes the h1s css and changes its "color" based on what the users choice was.
+        var txtC = $("input[name='color']:checked").val(); //gets users choice of color from the radio options.
+        $("#name").css("color", txtC); //takes the h1s css and changes its "color" based on what the users choice was.
       });
     });
   </script>
   <style>
-    #bgp {
+    #banner {
       background-size: cover;
       height: 500px;
       display: none;
@@ -37,7 +37,7 @@
 <body>
   <h1>YOUR VERY OWN BANNER GENERATOR!</h1>
   <div id="banner">
-    <h1 id="title"></h1>
+    <h1 id="name"></h1>
   </div>
   PLEASE PROVIDE US WITH YOUR FAVORITE SUBJECT IN SCHOOL:
   <input type="text" id="subject">
