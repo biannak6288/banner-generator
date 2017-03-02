@@ -3,20 +3,19 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>title</title>
+  <title>Banner Generator Project</title>
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <script>
     $(function() {
       $('button').click(function() {
         $("#banner").fadeIn("slow"); //this code makes the banner slowly appear by fading-in
-        $("#title").html(userName);// this codes takes all the information the user typed in the input and puts gives it all to the h1 in the div  
-        var userName = $("#subject").val();// this codes takes all the information the user typed in the input and puts gives it all to the h1 in the div  
-        $("#title").html(userName); // this code gets the exact id of the h1 tag and provides it to the div while also also putting it in the users input
-        var bgradio = $("input[title='bg']:checked").val(); //this code senses which option out of the four radio index choices was chosen and is able to sense the different choices given
+        $("#name").html(userName); // this codes takes all the information the user typed in the input and puts gives it all to the h1 in the div  
+        var userName = $("#subject").val(); // this codes takes all the information the user typed in the input and puts gives it all to the h1 in the div  
+        $("#name").html(userName); // this code gets the exact id of the h1 tag and provides it to the div while also also putting it in the users input
+        var bgradio = $("input[name='bg']:checked").val(); //this code senses which option out of the four radio index choices was chosen and is able to sense the different choices given
         $('#banner').css('background-image', 'url(' + bgradio + ')'); //this code takes the background and inserts the image that the user chose into their banner; the "url" was utilized as an image which was concatenated to the users choice  
-        var txtC = $("input[title='color']:checked").val(); //this code allows for the user to choose a color out of the four choices given and senses the one chosen
-        $("#title").css("color", txtC); //this code utilizes the h1 css to change the actual color fo the text that the user chose
-
+        var txtC = $("input[name='color']:checked").val(); //this code allows for the user to choose a color out of the four choices given and senses the one chosen
+        $("#name").css("color", txtC); //this code utilizes the h1 css to change the actual color fo the text that the user chose
       });
     });
   </script>
@@ -27,7 +26,7 @@
       display: none;
     }
     
-    #title {
+    #name {
       font-size: 100px;
       text-align: center;
     }
@@ -44,13 +43,13 @@
   <br>
   <br>CHOOSE A COLOR FOR ALL YOUR TEXT TO BE IN:
   <br>
-  <input type="radio" name="color" value="turquoise">turquoise
+  <input type="radio" name="color" value="turquoise">TURQUOISE
   <br>
-  <input type="radio" name="color" value="white">White
+  <input type="radio" name="color" value="red">RED
   <br>
-  <input type="radio" name="color" value="purple">purple
+  <input type="radio" name="color" value="purple">PURPLE
   <br>
-  <input type="radio" name="color" value="pink">pink
+  <input type="radio" name="color" value="pink">PINK
   <br>
   <br> PLEASE CHOOSE ONE OF THE FOUR BACKGROUNDS PROVIDED FOR YOU:
   <br>
